@@ -1,0 +1,95 @@
+/* CSS RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242223;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #FCFFFC;
+}
+
+header {
+    background-color: #0D0D0D;
+    text-align: center;
+    padding: 2em;
+    border-bottom: 0.3em solid #FCFFFC;
+}
+
+h1 {
+    font-size: 4em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+header h2 {
+    color: #7D7874;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+a {
+    color: #7D7874;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F2B33D;
+}
+
+/* === NAV INFO === */
+nav {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+
+/* === ARTICLE INFO === */
+article {
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+article h2 {
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 0.5em;
+}
+
+article p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+
+figure {
+    margin-bottom: 0.5em;
+}
+
+figcaption {
+    font-size: 0.75em;
+    color: #7D7874;
+    text-align: center;
+    font-style: italic;
+}
+
+figure img {
+    width: 100%;
+}
+
+/* === FOOTER INFO === */
+
+footer {
+    background-color: #0D0D0D;
+    font-size: 1em;
+    text-align: center;
+    padding: 2em;
+    border-top: 0.3em solid #FCFFFC;
+}
