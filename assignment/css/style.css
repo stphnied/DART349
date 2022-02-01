@@ -1,0 +1,208 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #191923;
+    color: #fbfef9;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+/* --- HEADER INFO --- */
+
+header {
+    text-transform: capitalize;
+    border-bottom: 2px solid #7692ff;
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 15em;
+}
+
+header a {
+    color: #fbfef9;
+}
+
+header a:hover,
+header h1:hover {
+    color: #7692ff;
+}
+
+
+/* Navigation menu */
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav ul li a {
+    height: 100%;
+    padding: 10px;
+}
+
+
+/* 
+***
+--- HOMEPAGE INFO --- 
+***
+*/
+
+/* DESC INFO */
+.desc {
+    margin: 1.5em 15em;
+}
+
+.desc h2 {
+    padding: 0.5em 0;
+}
+
+/* Grid list */
+.home-container {
+    display: grid;
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2rem;
+    grid-template-areas:
+        "about exercises "
+        "projects others";
+}
+
+.home-container .item {
+    background-color: #313146;
+    box-shadow: 0 0 5px #090913a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-container .item:hover, .ex-wrap .ex-item:hover {
+    background-color: #f88dad;
+    color: #191923;
+    cursor: pointer;
+}
+
+.item h2 {
+    padding: 1rem;
+}
+
+.item i {
+    font-size: 2em;
+}
+
+
+/* 
+***
+--- ABOUT PAGE INFO --- 
+***
+*/
+
+.about-container {
+    display: grid;
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-gap: 2rem;
+    grid-template-areas:
+        "me  work1"
+        "me work2";
+}
+
+.item {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+figure img {
+    box-shadow: 0 0 5px #090913a1;
+}
+.me {
+    grid-area: me;    
+}
+
+.about-container .item img {
+    width: 100%;
+}
+
+.about-container .item figcaption {
+    padding-top: 0.5em;
+    font-size: 0.5em;
+
+}
+
+
+/* 
+***
+--- EXERCISE PAGE INFO --- 
+***
+*/
+
+.ex-container {
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+}
+
+.ex-wrap {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ex-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #313146;
+    box-shadow: 0 0 5px #090913a1;
+    width: 200px;
+    height: 200px;
+}
+
+
+
+/* --- FOOTER INFO --- */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    background: #313146;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.74em;
+}
+
