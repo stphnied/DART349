@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+    background-color: rgb(78, 78, 78);
+    color: white;
+    text-align: center;
+    padding: 0.8em 0;
+}
+
+.parent {
+    position: relative;
+    width: 60%;
+    background: rgb(224, 224, 233);
+    margin: 0 auto;
+    top: 50px;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(40, 42, 70);
+    font-size: 4em;
+
+}
+
+.rel {
+    position: relative;
+    left: 1em;
+    transform: rotate(30deg);
+    background-color: crimson;
+}
+
+.abs {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: cadetblue;
+}

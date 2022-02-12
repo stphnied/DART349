@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-size: 18px;
+}
+
+.parent {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    /* min-height: 100vh;
+    height: auto; */
+    background-color: aquamarine;
+    padding: 1em 1em 0;
+}
+
+figure > img {
+    width: 100%;
+}
+
+figure {
+    margin-bottom: .9em ;
+}
+
+.art {
+    width: 100%;
+    min-height: 50vh;
+    height: auto;
+    /* Allows to be bigger than 50vh if needed */
+    padding: 1em 0.5em;
+}
+
+.art article {
+    column-count: 1;
+}
+
+article h2 {
+    font-size: 2em;
+    text-transform: capitalize;
+    margin-bottom: .2em ;
+}
+
+article p {
+    margin-bottom: 1.2em;
+    line-height: 1.2em;
+}
+
+.dark {
+    background-color: #444;
+    color: #eee;
+    min-height: 40vh;
+}
+
+
+/* TABLETTE LAYOUT 600px */
+@media only screen and (min-width: 600px) {
+
+    .parent {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-content: space-around;
+        min-height: 60vh;
+        height: auto;
+    }
+
+    figure {
+        width: 50%;
+        min-height: 100px;
+    }
+
+    .art article {
+        column-count: 2;
+        column-gap: 1em;
+        column-rule: 1px solid rgb(0, 132, 255);
+    }
+
+}
+
+
+/* DESKTOP LAYOUT >980px */
+@media only screen and (min-width: 980px) {
+
+    .parent {
+        min-height: 50vh;
+        height: auto;
+    }
+
+    figure {
+        width: 20%;
+        height: auto;
+    }
+
+    .art article {
+        column-count: 3;
+        column-gap: 1.25em;
+
+    }
+
+}
