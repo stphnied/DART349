@@ -12,10 +12,13 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-a, a:visited, a:hover, a:active {
+a,
+a:visited,
+a:hover,
+a:active {
     color: inherit;
     text-decoration: none;
-  }
+}
 
 
 /* --- HEADER INFO --- */
@@ -100,7 +103,8 @@ nav ul li a {
     flex-direction: column;
 }
 
-.home-container .item:hover, .ex-wrap .ex-item:hover {
+.home-container .item:hover,
+.ex-wrap .ex-item:hover {
     background-color: #f88dad;
     color: #191923;
     cursor: pointer;
@@ -148,8 +152,9 @@ nav ul li a {
 figure img {
     box-shadow: 0 0 5px #090913a1;
 }
+
 .me {
-    grid-area: me;    
+    grid-area: me;
 }
 
 .about-container .item img {
@@ -159,7 +164,6 @@ figure img {
 .about-container .item figcaption {
     padding-top: 0.5em;
     font-size: 0.5em;
-
 }
 
 
@@ -192,8 +196,6 @@ figure img {
     height: 200px;
 }
 
-
-
 /* --- FOOTER INFO --- */
 footer {
     position: absolute;
@@ -206,3 +208,127 @@ footer {
     font-size: 0.74em;
 }
 
+
+
+
+/*
+*****
+******
+****
+--- TABLETTE LAYOUT 780px --- 
+*****
+******
+****
+*/
+@media (max-width: 780px) {
+
+    body {
+        max-width: 100vh;
+        /* overflow-y: hidden; */
+    }
+
+    /* --- HEADER INFO --- */
+    .header-wrap {
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        padding: 1.5em;
+    }
+
+    .header-wrap h1 {
+        font-size: 3.5em;
+    }
+
+    /* --- Navigation menu ---  */
+    nav {
+        display: none;
+    }
+
+    .desc {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 1.5em 0;
+    }
+
+    .desc h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
+    }
+
+    .desc p {
+        display: flex;
+        margin: 0 auto;
+        padding: 0 0 0.5em 0;
+        font-size: 1.5em;
+        max-width: 500px;
+    }
+
+    .home-container {
+        width: 85vw;
+        height: 50vh;
+    }
+
+
+    /* --- ABOUT --- */
+    .about-container {
+        width: 90vw;
+        height: 50vh;
+        padding-bottom: 100px;
+        grid-gap: 0 2rem;
+    }
+    
+
+    /* --- EXERCISE  ---  */
+
+    .ex-container {
+        width: 85vw;
+    }
+
+    .ex-wrap {
+        flex-direction: column;
+    }
+
+    .ex-item {
+        width: 400px;
+        height: 200px;
+        margin-bottom: 1.5em;
+    }
+    
+
+
+    footer {
+        padding: 1.75em;
+        font-size: 1em;
+        bottom: -20px;
+    }
+}
+
+/*
+*****
+******
+****
+--- MOBILE LAYOUT 600px --- 
+*****
+******
+****
+*/
+@media (max-width: 600px) {
+
+    /* --- Grid list--- */
+    .home-container {
+        display: grid;
+        width: 90vw;
+        height: 60vh;
+
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr ;
+        grid-gap: 2rem;
+        grid-template-areas:
+            "about"
+            "exercises"
+            "projects"
+            "others";
+    }
+}
