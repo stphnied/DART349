@@ -280,22 +280,20 @@ footer {
     }
     
 
-    /* --- EXERCISE  ---  */
-
+    /* EXERCISE */
     .ex-container {
         width: 85vw;
     }
 
     .ex-wrap {
-        flex-direction: column;
+        flex-wrap: wrap;
+        flex-basis: 25%;
     }
-
     .ex-item {
-        width: 400px;
+        width: 500px;
         height: 200px;
         margin-bottom: 1.5em;
     }
-    
 
 
     footer {
@@ -316,7 +314,7 @@ footer {
 */
 @media (max-width: 600px) {
 
-    /* --- Grid list--- */
+    /* --- Home --- */
     .home-container {
         display: grid;
         width: 90vw;
@@ -331,4 +329,16 @@ footer {
             "projects"
             "others";
     }
+
+    /* --- EXERCISE  ---  */
+    .ex-wrap {
+        flex-direction: column;
+    }
+
+    .ex-item {
+        width: 400px;
+        height: 200px;
+        margin-bottom: 1.5em;
+    }
+    
 }
