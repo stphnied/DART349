@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section.parent {
+  width:50%;
+  margin:0 auto;
+  background: #eee;
+  position:relative;
+}
+
+div {
+  width:200px;
+  height: 200px;
+  background: #333;
+  color:#fff;
+  margin:20px;
+  padding: 20px;
+  font-size: 50px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rel {
+  background: crimson;
+  position:relative;
+  left:0px;
+  top:0px;
+  z-index:99;
+}
+
+.abso {
+  background: cadetblue;
+  position: absolute;
+  right:-50px;
+  bottom:-50px;
+}

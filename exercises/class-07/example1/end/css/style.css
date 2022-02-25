@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oi&family=Roboto+Slab&display=swap');
+/* === CSS RESET === */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: 'Roboto Slab', serif;
+}
+/* === NAV INFO HERE === */
+nav {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background: #333;
+  display:flex;
+  /* justify-content: flex-end; */
+  z-index:999;
+}
+nav a:link {
+  color: #fff;
+  background:#333;
+  padding:20px;
+  text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+  transition: all .3s;
+}
+nav a:visited {
+  color: #fff;
+  background:#333;
+  text-decoration: underline;
+}
+
+nav a:hover {
+  color:#333;
+  background: #fff;
+}
+
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/spring.jpg) fixed no-repeat center center;
+  background-size: cover;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  color:#fff;
+  font-family: 'Bebas Neue', cursive;
+  /* font-family: 'Oi', cursive; */
+  /* font-weight: normal; */
+  font-size: 6.5em;
+  text-align: center;
+  line-height: 86px;
+  text-shadow: 0px 0px 40px rgba(0,0,0,0.3);
+}
+
+header h2 {
+  color:#eee;
+  font-size: 2em;
+  text-transform: capitalize;
+  /* letter-spacing: 0.1em; */
+}
+
+
+/* === SECTION INFO HERE === */
+section.text {
+  width:100%;
+  min-height: 50vh;
+  height: auto;
+  display:flex;
+}
+section article {
+  background: #eee;
+  width:75%;
+  padding: 2em;
+}
+section article h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3em;
+}
+section article p {
+  margin-bottom: 1.2em;
+  font-size: 1.4em;
+  line-height: 1.6em;
+}
+
+section aside {
+  background: darkseagreen;
+  width:25%;
+  padding: 2em;
+}
+
+section aside p {
+  margin-bottom: 1.2em;
+  font-size: 1em;
+  font-style: italic;
+}
+
+/* === GALLERY SECTION INFO === */
+section.gallery {
+  width:100%;
+  min-height: 50vh;
+  height: auto;
+  padding: 1.2em;
+  background: url(../images/tile.jpg);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+section.gallery div {
+  width:200px;
+  height: 200px;
+  background: rgba(166, 191, 75, 0.9);
+  margin:1.2em;
+  font-size: 2em;
+  padding: 1.2em;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 2px 2px rgba(0,0,0, .3);
+  position: relative;
+  top:0;
+  transition: all .5s;
+  /* opacity:0.5; */
+}
+
+section.gallery div:hover {
+  box-shadow: 1px 2px 30px rgba(0,0,0, .7);
+  top:-50px;
+  background: rgba(166, 191, 75, 1);
+}
+
+
+footer {
+  background:#333;
+  color:#fff;
+  padding: 1.2em;
+  text-align: center;
+}

@@ -108,6 +108,7 @@ nav ul li a {
     background-color: #f88dad;
     color: #191923;
     cursor: pointer;
+    transition: all .3s;
 }
 
 .item h2 {
