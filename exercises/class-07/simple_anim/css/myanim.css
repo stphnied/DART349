@@ -19,16 +19,26 @@ header h1 {
   /* in order to animate an objects position it must relative or absolute */
   position: relative;
   /* left:40px; */
-  bottom:-200px;
-  opacity:.7;
+  /* bottom:-200px; */
+  transform: translateY(200px);
+  opacity:0;
   border:1px solid red;
   display:inline-block;
   text-align: center;
   animation: slider 1s 1s forwards cubic-bezier(.56,-0.61,.46,1.57);
 }
 @keyframes slider {
-  from { bottom:-200px; opacity:.7; }
-	to {bottom:0px; opacity:1;}
+  from { 
+    /* bottom:-200px; */
+    transform: translateY(200px);
+    opacity:0;
+    
+   }
+	to {
+    /* bottom:0px; */
+    transform: translateY(0);
+    opacity:1;
+  }
 }
 
 .anim {
