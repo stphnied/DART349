@@ -168,14 +168,22 @@ nav ul li a:hover {
     width: 85vw;
     height: 2000px;
     margin: 3em auto;
-    grid-template-columns: 0.75fr 1.5fr;
-    grid-template-rows: 0fr 0.75fr 0.75fr 1fr;
+    grid-template-columns: 0.75fr 1fr 1.25fr;
+    grid-template-rows: 0fr 0.25fr 0.25fr 0.25fr;
     grid-gap: 1rem;
     grid-template-areas:
-        "Title1 Title2"
-        "main anxiety "
-        "main overthiking"
-        "main help";
+        "Title1 Title2 Title3"
+        "mob main anxiety"
+        "mob main overthinking"
+        "mob main help";
+}
+
+.img-container img {
+    opacity: 0.3;
+}
+
+.img-container img:hover {
+    opacity: 1;
 }
 
 .main {
@@ -189,6 +197,10 @@ nav ul li a:hover {
 .main:hover {
     background-image: url("../assets/Homepage-interaction.jpg");
     transition: all .3s;
+}
+
+.mob {
+    grid-area: mob;
 }
 
 /* STYLE GUIDE CONTENT */
@@ -281,7 +293,7 @@ hr {
 
 .content-img img {
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .content-img img:hover {
