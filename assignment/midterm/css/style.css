@@ -110,7 +110,7 @@ nav ul li a:hover {
 .essay-container,
 .wireframe-container {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
 }
 
 .essay-container hgroup,
@@ -142,6 +142,11 @@ nav ul li a:hover {
 .essay-container a:hover {
     color: rgb(255, 36, 36);
     transition: all .3s;
+}
+
+.essay-container sup {
+    font-size: 0.75em;
+    color: grey;
 }
 
 /* WIREFRAME SECTION --- */
