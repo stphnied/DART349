@@ -1,0 +1,164 @@
+/* === ANIMATIONS FOR SCROLL BASED INTERACTION === */
+
+.slide-left {
+	opacity: 0;
+	transform: translateX(2em);
+	transition: all .5s .35s ease-out;
+	will-change: all;
+}
+
+.slide-left.is-visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.slide-up {
+	opacity: 0;
+	transform: translateY(2em);
+	transition: all .5s .5s ease-out;
+	/* will-change: all; */
+}
+
+.slide-up.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.fade-in {
+	opacity: 0;
+	transition: all 1s  ease-out;
+}
+.fade-in.is-visible {
+	opacity: 1;
+}
+
+.slide-right {
+	opacity: 0;
+	transform: translateX(-10em) rotate(0);
+	transition: all .5s 1s ease-out;
+	will-change: all;
+}
+
+.slide-right.is-visible {
+	opacity: 1;
+	transform: translateX(0) rotate(-10deg);
+}
+
+/* =========== ANIMATED BARS =============== */
+.bird img{
+	width:100%;
+}
+.bird-blue {
+  width:500px;
+  height: auto;
+  position: absolute;
+  top:20%;
+  left:10%;
+  z-index: 25;
+  mix-blend-mode: multiply;
+}
+
+.container {
+  overflow: hidden;
+  width:100%;
+  z-index:0;
+}
+
+.container1 {
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+.container2 {
+  position: absolute;
+  bottom:180px;
+  left:0;
+}
+
+.bar-left {
+  display:block;
+  background: url("../images/bar.svg") repeat-x;
+  height: 200px;
+  width: 4000px; /* The image width times 4 */
+	opacity:0;
+	transition: all .5s;
+}
+.bar-left.is-visible {
+	opacity:1;
+  animation: slide-left 60s linear infinite;
+}
+.bar-right {
+  display:block;
+  background: url("../images/bar2.svg") repeat-x;
+  height: 200px;
+  width: 4000px; /* The image width times 4 */
+	opacity:0;
+	transition: all .5s;
+}
+.bar-right.is-visible {
+	opacity:1;
+  animation: slide-right 30s linear infinite;
+}
+
+
+@keyframes slide-left{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+@keyframes slide-right{
+  0% {
+    transform: translate3d(-2000px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* New added animations */
+.pop-up {
+  opacity: 0;
+	transition: all .5s .5s ease-in-out;
+}
+.pop-up.is-visible {
+	opacity:1;
+  animation: pop-up 0.5s linear;
+}
+
+
+@keyframes pop-up{
+  0% {
+    transform: translateY(75%);;
+  }
+  100% {
+    transform: translateY(0%);;
+  }
+}
+
+/* New added animations */
+
+
+.headlineTxt {
+  transform: translateY(0);
+}
+.pop-down {
+  opacity: 0;
+	transition: all .5s .5s ease-in-out;
+}
+.pop-down.is-visible {
+	opacity:1;
+  animation: pop-down 1s linear;
+}
+
+@keyframes pop-down {
+  0% {
+    transform: translateY(-200px);;
+  }
+  100% {
+    transform: translateY(0px);;
+  }
+}

@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* removing margin and paddign for all elements is a little overzealous */
+  box-sizing: border-box;
+}
+
+html, body {
+  overscroll-behavior: none;
+  width: 100%;
+  overflow-x: hidden;
+  background: #ef79af;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+h1, h2 {
+  /* font-family: kansasnew, serif;
+  font-weight: 800;
+  font-style: normal; */
+  font-family: manteiga-gorda, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #eee;
+  text-transform: capitalize;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 6em 0 0;
+  position: relative;
+}
+
+hgroup {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+hgroup h1 {
+  font-size: 7vmax;
+  line-height: 1em;
+  text-shadow: 1px 1px 0 #211c56, 2px 2px 0 #211c56, 3px 3px 0 #211c56;
+}
+
+hgroup h3 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5vmax;
+  line-height: 1em;
+  color: #201c56;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+}
+
+figure.portrait {
+  display: block;
+  max-width: 700px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* left: 50%; */
+  transform: translateY(0%);
+}
+
+figure img {
+  display: block;
+  /* this got rid of the space around the svg */
+}
+
+section.intro {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background: #211c56;
+  /* background: #ef79af; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+}
+
+.intro article {
+  background: #211c56;
+  max-width: 700px;
+  width: 100%;
+  padding: 15em 1em;
+}
+
+article h2 {
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: .4em;
+}
+
+article p {
+  color: #eee;
+  margin-bottom: 2em;
+  line-height: 1.4em;
+}

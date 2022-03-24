@@ -1,0 +1,25 @@
+/* === ANIMATIONS FOR SCROLL BASED INTERACTION === */
+
+.slide {
+	opacity: 0;
+	transform: translateX(2em);
+	transition: all .5s .35s ease-out;
+	will-change: all;
+}
+
+.slide.is-visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.slide-up {
+	opacity: 0;
+	transform: translateY(2em);
+	transition: all .3s .5s ease-out;
+/*	will-change: all;*/
+}
+
+.slide-up.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
