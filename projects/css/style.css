@@ -204,6 +204,67 @@ figure img {
 
 /* ----- ANXIETY SECTION----- */
 
+.anxiety {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anxiety figure {
+  align-self: flex-end;
+  width: 70vw;
+  /* height: 50h; */
+}
+
+
+/*  ----- OVERTHINKING SECTION ----- */
+
+.overthinking {
+  position:relative;
+}
+
+.overthinking .walk {
+  display: block;
+  width: 20vw;
+  position: absolute;
+  bottom: 1em;
+  left: 40%;
+  z-index: 2;
+}
+
+/* .container {
+  overflow: hidden;
+  width:100%;
+  z-index:1;
+} */
+
+
+.pathway-container {
+  position: absolute;
+  bottom:0;
+  left:0;
+  opacity: 0.4;
+}
+
+.path-left {
+  display:block;
+  background: url("../images/pathway.svg") repeat-x;
+  height: 100px;
+  width: 4000px; 
+	opacity:1;
+  animation: slide-left 60s linear infinite;
+}
+
+.tree-left {
+  display:block;
+  background: url("../images/trees.svg") repeat-x;
+  height: 500px;
+  width: 4000px; 
+	opacity:1;
+  animation: slide-left 60s linear infinite;
+}
+
+
 /* ----- ANIMATIONS ----- */
 
 @keyframes move-down {
@@ -236,4 +297,13 @@ figure img {
 @keyframes rotate-up {
   from {transform: rotate(-90deg);}
   to {transform: rotate(0deg);}
+}
+
+@keyframes slide-left{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-2000px, 0, 0);
+  }
 }
