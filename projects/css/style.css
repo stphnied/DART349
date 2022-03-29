@@ -1,0 +1,239 @@
+/* Init*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+  width: 100%;
+  overflow-x: hidden;
+  background: #080809;
+  color: white;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0000005e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.637);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+
+/* ----- HOMEPAGE SECTION ----- */
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  flex-direction: row;
+}
+
+hgroup h1 {
+  font-size: 5vmax;
+  color: #fff;
+  text-align: center;
+}
+
+/* Scroll Btn */
+/* Code inspired from https://codepen.io/xonic/pen/KWMaqe */
+.scrollBtn-container {
+  position: absolute;
+  left: 50%;
+  bottom: 1em;
+}
+
+.classBtn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move-down 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move-down 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-down 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+/* ----- INTRO SECTION ----- */
+
+.intro {
+  /* background-color: blue; */
+  position: relative;
+}
+
+figure img {
+  display: block;
+  /* this got rid of the space around the svg */
+}
+
+.intro .people {
+  position: absolute;
+  padding: 0 1em;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.3;
+}
+
+.intro .portrait {
+  position: absolute;
+  max-width: 250px;
+  width: 100%;
+  bottom: 0;
+  left: 45%;
+  z-index: 30;
+}
+
+/* Speech bubble */
+.bubbleTxt {
+  position: absolute;
+  left: 40%;
+  top: 20%;
+}
+
+.bubble {
+  height: auto;
+  max-width: 200px;
+  position: relative;
+
+  background: #d1d1d1;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 30px;
+
+  filter: drop-shadow(-7px 3px 0px blue);
+  text-align: center;
+  border-radius: 10px;
+  padding: 1em;
+
+  transform-origin: bottom center;
+  /* transform: rotate(-20deg); */
+  animation: rotate-up 0.3s ease-out;
+}
+.bubble:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #d1d1d1 transparent transparent;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.bubble p {
+  /* width: auto; */
+  /* overflow-wrap: break-word; 
+  word-wrap: break-word;
+  hyphens: auto; */
+}
+
+
+/* ----- ANXIETY SECTION----- */
+
+/* ----- ANIMATIONS ----- */
+
+@keyframes move-down {
+  25% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-up {
+  from {transform: rotate(-90deg);}
+  to {transform: rotate(0deg);}
+}
