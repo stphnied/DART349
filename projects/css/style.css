@@ -166,7 +166,7 @@ figure img {
   max-width: 200px;
   position: relative;
 
-  background: #d1d1d1;
+  background: #1f1c1c;
   color: #FFFFFF;
   font-size: 20px;
   line-height: 30px;
@@ -180,6 +180,7 @@ figure img {
   /* transform: rotate(-20deg); */
   animation: rotate-up 0.3s ease-out;
 }
+
 .bubble:after {
   content: '';
   position: absolute;
@@ -216,12 +217,36 @@ figure img {
   /* height: 50h; */
 }
 
+.anxiety .eyeball {
+  opacity: 1;
+  /* animation: pulse 5s 2s linear alternate infinite; */
+}
+
+.anxiety .eyeball:hover {
+  opacity: 0;
+}
 
 /*  ----- OVERTHINKING SECTION ----- */
 
 .overthinking {
-  position:relative;
+  position: relative;
 }
+
+.thoughts-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.thoughts-container p {
+  position: absolute;
+  top: 1000px;
+  left: 100px;
+  z-index: 10;
+  opacity: 0;
+  font-size: 2em;
+  /* animation: words-up 10s 2s ease-out infinite; */
+}
+
 
 .overthinking .walk {
   display: block;
@@ -241,26 +266,26 @@ figure img {
 
 .pathway-container {
   position: absolute;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
   opacity: 0.4;
 }
 
 .path-left {
-  display:block;
+  display: block;
   background: url("../images/pathway.svg") repeat-x;
   height: 100px;
-  width: 4000px; 
-	opacity:1;
+  width: 4000px;
+  opacity: 1;
   animation: slide-left 60s linear infinite;
 }
 
 .tree-left {
-  display:block;
+  display: block;
   background: url("../images/trees.svg") repeat-x;
   height: 500px;
-  width: 4000px; 
-	opacity:1;
+  width: 4000px;
+  opacity: 1;
   animation: slide-left 60s linear infinite;
 }
 
@@ -295,15 +320,48 @@ figure img {
 }
 
 @keyframes rotate-up {
-  from {transform: rotate(-90deg);}
-  to {transform: rotate(0deg);}
+  from {
+    transform: rotate(-90deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
 }
 
-@keyframes slide-left{
+@keyframes slide-left {
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     transform: translate3d(-2000px, 0, 0);
   }
+}
+
+
+@keyframes words-up {
+  0% {
+    opacity: 0;
+    top: 100%;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade {
+  from {opacity:0}
+  to {opacity: 1;}
 }
