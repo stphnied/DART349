@@ -1,0 +1,144 @@
+/* ----- ANIMATIONS ----- */
+
+@keyframes move-down {
+    25% {
+      opacity: 1;
+    }
+  
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+  
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotate-up {
+    from {
+      opacity: 0;
+      transform: rotate(-180deg);
+    }
+  
+    to {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes rotate-down {
+    from {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+  
+    to {
+      transform: rotate(-180deg);
+      opacity: 0;
+    }
+  }
+  
+  
+  @keyframes slide-left {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: translate3d(-2000px, 0, 0);
+    }
+  }
+  
+  
+  @keyframes words-up {
+    0% {
+      opacity: 0;
+      top: 80%;
+    }
+  
+    25% {
+      opacity: 0.25;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    75% {
+      opacity: 0.75;
+    }
+  
+  
+    100% {
+      opacity: 0;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeBg {
+    from {
+      opacity: 0
+    }
+  
+    to {
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Change color */
+  @keyframes changeColor {
+    from {
+      background-color: #555;
+    }
+  
+    to {
+      background-color: #080809;
+    }
+  }
+  
+  /* Rotate */
+  @keyframes rotate {
+    50% {
+      transform: rotate(180deg);
+      background-color: #d1d1d1;
+  
+    }
+  
+    100% {
+      transform: rotate(360deg);
+      background-color: #080809;
+    }
+  }
+  
+  /* Pop-up */
+  @keyframes pop-up{
+    0% {
+      transform: translateY(75%);;
+    }
+    100% {
+      transform: translateY(0%);;
+    }
+  }

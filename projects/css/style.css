@@ -128,13 +128,11 @@ hgroup h1 {
 /* ----- INTRO SECTION ----- */
 
 .intro {
-  /* background-color: blue; */
   position: relative;
 }
 
 figure img {
   display: block;
-  /* this got rid of the space around the svg */
 }
 
 .intro .people {
@@ -142,7 +140,13 @@ figure img {
   padding: 0 1em;
   width: 100%;
   bottom: 0;
+  opacity: 0;
+  /* filter:sepia(100%) saturate(300%) brightness(30%) hue-rotate(195deg); */
+}
+
+.intro .people.is-visible {
   opacity: 0.3;
+  animation: fadeBg 0.5s linear;
 }
 
 .intro .portrait {
@@ -152,33 +156,55 @@ figure img {
   bottom: 0;
   left: 45%;
   z-index: 30;
+ 
+  transform: translateY(10%);
+  opacity: 0;
 }
+
+.pop-up.is-visible {
+  animation: pop-up2 2s 0.25s forwards;
+}
+
+/* Character Pop-up */
+@keyframes pop-up2{
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+    left: 45%;
+  }
+  to {
+    opacity: 1;
+   transform: translateY(0%);
+    left: 45%;
+  }
+}
+
 
 /* Speech bubble */
 .bubbleTxt {
   position: absolute;
-  left: 40%;
-  top: 20%;
+  left: 35%;
+  top: 15%;
 }
 
-.bubble {
+.bubbleTxt {
   height: auto;
   max-width: 200px;
   position: relative;
 
-  background: #1f1c1c;
-  color: #FFFFFF;
+  background: #fbfef9;
+  color: #080809;
   font-size: 20px;
   line-height: 30px;
 
-  filter: drop-shadow(-7px 3px 0px blue);
+  filter: drop-shadow(-7px 3px 0px #131335);
   text-align: center;
   border-radius: 10px;
   padding: 1em;
-
+  opacity: 0;
   transform-origin: bottom center;
-  /* transform: rotate(-20deg); */
-  animation: rotate-up 0.3s ease-out;
+  transition: .5 all;
+
 }
 
 .bubble:after {
@@ -189,17 +215,53 @@ figure img {
   z-index: 1;
   border-style: solid;
   border-width: 0 20px 20px 0;
-  border-color: transparent #d1d1d1 transparent transparent;
+  border-color: transparent #fbfef9 transparent transparent;
   bottom: -20px;
   left: 50%;
   margin-left: -10px;
 }
 
-.bubble p {
-  /* width: auto; */
-  /* overflow-wrap: break-word; 
-  word-wrap: break-word;
-  hyphens: auto; */
+
+/* Speech bubble */
+/* Speech bubble */
+.bubbleTxt2 {
+  position: absolute;
+  left: 60%;
+  top: 10%;
+}
+
+
+.bubbleTxt2 {
+  height: auto;
+  max-width: 200px;
+  position: relative;
+
+  background: #fbfef9;
+  color: #080809;
+  font-size: 20px;
+  line-height: 30px;
+
+  filter: drop-shadow(-7px 3px 0px #131335);
+  text-align: center;
+  border-radius: 10px;
+  padding: 1em;
+  opacity: 0;
+  transform-origin: bottom center;
+  transition: .5 all;
+}
+
+.bubbleTxt2 .bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: #fbfef9 transparent transparent transparent;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -10px;
 }
 
 
@@ -211,10 +273,43 @@ figure img {
   align-items: center;
 }
 
+.anxiety side {
+  padding-left: 2em;
+}
+
+.anxiety h1 {
+  font-size: 3em;
+  margin-bottom: 0.25em;
+}
+
+.anxiety p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #6d6d6d;
+}
+
+.text-left {
+  opacity: 0;
+	transform: translateX(-10em);
+	transition: all 2s .5s ease-out;
+	will-change: all;
+}
+
+.text-left.is-visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+
 .anxiety figure {
   align-self: flex-end;
   width: 70vw;
-  /* height: 50h; */
+  opacity: 0;
+}
+
+
+.anxiety .watched.is-visible {
+  animation: fade 2s forwards;
 }
 
 .anxiety .eyeball {
@@ -224,6 +319,7 @@ figure img {
 
 .anxiety .eyeball:hover {
   opacity: 0;
+  cursor: pointer;
 }
 
 /*  ----- OVERTHINKING SECTION ----- */
@@ -257,6 +353,10 @@ figure img {
   z-index: 2;
 }
 
+.walk {
+  animation: slide-lef 2s ease-in;
+}
+
 /* .container {
   overflow: hidden;
   width:100%;
@@ -276,6 +376,11 @@ figure img {
   background: url("../images/pathway.svg") repeat-x;
   height: 100px;
   width: 4000px;
+  opacity: 0;
+
+}
+
+.path-left.is-visible {
   opacity: 1;
   animation: slide-left 60s linear infinite;
 }
@@ -285,83 +390,54 @@ figure img {
   background: url("../images/trees.svg") repeat-x;
   height: 500px;
   width: 4000px;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.tree-left.is-visible {
   opacity: 1;
   animation: slide-left 60s linear infinite;
 }
 
 
-/* ----- ANIMATIONS ----- */
+/* ----- INSOMNIA SECTION ----- */
 
-@keyframes move-down {
-  25% {
-    opacity: 1;
-  }
-
-  33% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-
-  67% {
-    opacity: 1;
-    transform: translateY(40px);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-  }
+.insomnia {
+  position: relative;
 }
 
-@keyframes pulse {
-  to {
-    opacity: 1;
-  }
+.insomnia.is-visible {
+  /* background-color: blue; */
+  animation: changeColor 5s linear alternate infinite;
 }
 
-@keyframes rotate-up {
-  from {
-    transform: rotate(-90deg);
-  }
-
-  to {
-    transform: rotate(0deg);
-  }
+.insomnia figure {
+  display: block;
+  position: absolute;
+  width: 50vw;
+  left: 5%;
+  top: 40%;
+  transform: rotate(25deg);
 }
 
-@keyframes slide-left {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  100% {
-    transform: translate3d(-2000px, 0, 0);
-  }
+.sun {
+  position: absolute;
+  transform-origin: 550% top;
+  top: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 0 14px 14px rgba(221, 221, 221, 0.2);
+  animation: rotate 10s linear infinite;
 }
 
+.insomnia side {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  text-align: right;
+  margin: 0 auto;
+  padding-right: 2em;
+  transform: translateY(100%);
 
-@keyframes words-up {
-  0% {
-    opacity: 0;
-    top: 100%;
-  }
-
-  25% {
-    opacity: 0.25;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes fade {
-  from {opacity:0}
-  to {opacity: 1;}
 }
