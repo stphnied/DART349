@@ -99,8 +99,14 @@ function blinkEye() {
     }
 
   }
-}
+  else {
+    for (let i = 0; i < eyeballs.length; i++) {
+      let thisEyeball = eyeballs[i];
 
+      thisEyeball.style.animation = "none";
+    }
+  }
+}
 
 
 
@@ -127,8 +133,8 @@ function createWords() {
       let thisP = thoughtsP[i];
 
       // get random numbers 
-      let randomTop = getRandomNumber(0, winHeight);
-      let randomLeft = getRandomNumber(0, winWidth);
+      let randomTop = getRandomNumber(0, winHeight - 5);
+      let randomLeft = getRandomNumber(0, winWidth - 5);
       let randomFont = getRandomNumber(1, 5);
 
       // update top and left position

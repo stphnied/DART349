@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 html,
@@ -40,6 +41,7 @@ section {
   height: 100vh;
 }
 
+h1 {font-size: 5vmax;}
 
 /* ----- HOMEPAGE SECTION ----- */
 .homepage {
@@ -56,7 +58,6 @@ section {
 }
 
 hgroup h1 {
-  font-size: 5vmax;
   color: #fff;
   text-align: center;
 }
@@ -129,6 +130,7 @@ hgroup h1 {
 
 .intro {
   position: relative;
+  overflow: hidden;
 }
 
 figure img {
@@ -156,8 +158,8 @@ figure img {
   bottom: 0;
   left: 45%;
   z-index: 30;
- 
-  transform: translateY(10%);
+
+  transform: translateY(75%);
   opacity: 0;
 }
 
@@ -166,15 +168,16 @@ figure img {
 }
 
 /* Character Pop-up */
-@keyframes pop-up2{
+@keyframes pop-up2 {
   from {
     opacity: 0;
-    transform: translateY(10%);
+    transform: translateY(75%);
     left: 45%;
   }
+
   to {
     opacity: 1;
-   transform: translateY(0%);
+    transform: translateY(0%);
     left: 45%;
   }
 }
@@ -251,17 +254,17 @@ figure img {
 }
 
 .bubbleTxt2 .bubble:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0;
-    z-index: 1;
-    border-style: solid;
-    border-width: 20px 20px 0 0;
-    border-color: #fbfef9 transparent transparent transparent;
-    bottom: -20px;
-    left: 50%;
-    margin-left: -10px;
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-width: 20px 20px 0 0;
+  border-color: #fbfef9 transparent transparent transparent;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -10px;
 }
 
 
@@ -269,12 +272,12 @@ figure img {
 
 .anxiety {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 .anxiety side {
-  padding-left: 2em;
+  /* padding-left: 2em; */
 }
 
 .anxiety h1 {
@@ -290,20 +293,20 @@ figure img {
 
 .text-left {
   opacity: 0;
-	transform: translateX(-10em);
-	transition: all 2s .5s ease-out;
-	will-change: all;
+  transform: translateX(-10em);
+  transition: all 2s .5s ease-out;
+  will-change: all;
 }
 
 .text-left.is-visible {
-	opacity: 1;
-	transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 
 .anxiety figure {
   align-self: flex-end;
-  width: 70vw;
+  width: 60vw;
   opacity: 0;
 }
 
@@ -326,6 +329,7 @@ figure img {
 
 .overthinking {
   position: relative;
+  overflow: hidden;
 }
 
 .thoughts-container {
@@ -340,7 +344,6 @@ figure img {
   z-index: 10;
   opacity: 0;
   font-size: 2em;
-  /* animation: words-up 10s 2s ease-out infinite; */
 }
 
 
@@ -351,18 +354,14 @@ figure img {
   bottom: 1em;
   left: 40%;
   z-index: 2;
+  opacity: 0;
+  /* transition: all 2s; */
 }
 
-.walk {
-  animation: slide-lef 2s ease-in;
+.walk.is-visible {
+  opacity: 1;
+  animation: slide-left 3s ease-in-out reverse;
 }
-
-/* .container {
-  overflow: hidden;
-  width:100%;
-  z-index:1;
-} */
-
 
 .pathway-container {
   position: absolute;
@@ -404,31 +403,46 @@ figure img {
 
 .insomnia {
   position: relative;
+  overflow: hidden;
 }
 
 .insomnia.is-visible {
-  /* background-color: blue; */
+  background-color: blue;
   animation: changeColor 5s linear alternate infinite;
 }
 
 .insomnia figure {
   display: block;
   position: absolute;
-  width: 50vw;
+  width: 40vw;
   left: 5%;
   top: 40%;
   transform: rotate(25deg);
+  overflow: hidden;
+  transition: all 0.5s;
+
+}
+
+.insomnia figure.is-visible {
+  animation: fade 2s forwards ;
 }
 
 .sun {
   position: absolute;
-  transform-origin: 550% top;
-  top: 50%;
-  width: 80px;
-  height: 80px;
+  transform-origin: 100% top;
+  top: 20%;
+  right: 5%;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  opacity: 0;
   box-shadow: 0 0 14px 14px rgba(221, 221, 221, 0.2);
-  animation: rotate 10s linear infinite;
+  transition: all 0.2s;
+}
+
+.sun.is-visible {
+  animation: rotate 5s 1s linear infinite;
+  opacity: 1;
 }
 
 .insomnia side {
@@ -436,8 +450,137 @@ figure img {
   justify-content: end;
   align-items: flex-end;
   text-align: right;
+  flex-direction: column;
+  font-size: 1.5em;
   margin: 0 auto;
   padding-right: 2em;
-  transform: translateY(100%);
-
+  transform: translateY(25%);
 }
+
+.insomnia side p {
+  line-height: 1.5em;
+}
+
+.insomnia hgroup, .insomnia .clock {
+  transform: translateX(2000px);
+  opacity: 0;
+}
+
+
+.insomnia hgroup.is-visible {
+  opacity: 1;
+  animation: slide-right 2s  forwards;
+}
+
+.insomnia .clock.is-visible {
+  animation: slide-right 2s 0.3s forwards;
+}
+
+
+/* Code inspired from: https://acodeakash.com/pure-css-clock-animation/ */
+.insomnia .clock {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 100%;
+  margin: 5em 2em;
+  border: 1em solid white;
+  opacity: 0.7;
+}
+
+.insomnia .clock::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.insomnia .clock:hover {
+  cursor: pointer;
+}
+.insomnia .clock:hover >* {
+  animation-play-state: paused;
+  /* cursor: pointer; */
+}
+
+.insomnia .hand {
+  position: absolute;
+  top: 50%;
+  /* z-index: 10; */
+  transform-origin: center top;
+}
+
+.insomnia .minute {
+  left: 50%;
+  width: 1%;
+  height: 40%;
+  background-color: #131335;
+  animation: rotate-nonstop 3s linear infinite;
+}
+
+.insomnia .hour {
+  left: 50%;
+  width: 2%;
+  height: 30%;
+  background-color: #555;
+  animation: rotate-nonstop 6s 0.5s linear infinite;
+}
+
+
+/* LONELY SECTION */
+
+.lonely {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 20em;
+}
+
+
+.lonely p {
+  font-size: 1.5em;
+}
+
+.lonely figure {
+  display: block;
+  position: relative;
+}
+
+.lonely figure {
+  width: 20vw;
+}
+
+.lonely-boy {
+  padding: 1em;
+}
+
+.lonely .door {
+  position: absolute;
+  width: 20vw;
+  top: -100%;
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.door.is-visible {
+  animation: door-close 2s 0.5s 1;
+  opacity: 1;
+}
+
+.lonely .door:hover {
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+.lonely side {
+  margin-left: 2em;
+}
+

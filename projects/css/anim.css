@@ -1,144 +1,202 @@
 /* ----- ANIMATIONS ----- */
 
+
+/* Moving down */
 @keyframes move-down {
-    25% {
-      opacity: 1;
-    }
-  
-    33% {
-      opacity: 1;
-      transform: translateY(30px);
-    }
-  
-    67% {
-      opacity: 1;
-      transform: translateY(40px);
-    }
-  
-    100% {
-      opacity: 0;
-      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-    }
+  25% {
+    opacity: 1;
   }
-  
-  @keyframes pulse {
-    to {
-      opacity: 1;
-    }
+
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
   }
-  
-  @keyframes rotate-up {
-    from {
-      opacity: 0;
-      transform: rotate(-180deg);
-    }
-  
-    to {
-      opacity: 1;
-      transform: rotate(0deg);
-    }
+
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
   }
-  
-  @keyframes rotate-down {
-    from {
-      transform: rotate(0deg);
-      opacity: 1;
-    }
-  
-    to {
-      transform: rotate(-180deg);
-      opacity: 0;
-    }
+
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
   }
-  
-  
-  @keyframes slide-left {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-  
-    100% {
-      transform: translate3d(-2000px, 0, 0);
-    }
+}
+
+/* Pulsing */
+@keyframes pulse {
+  to {
+    opacity: 1;
   }
-  
-  
-  @keyframes words-up {
-    0% {
-      opacity: 0;
-      top: 80%;
-    }
-  
-    25% {
-      opacity: 0.25;
-    }
-  
-    50% {
-      opacity: 1;
-    }
-  
-    75% {
-      opacity: 0.75;
-    }
-  
-  
-    100% {
-      opacity: 0;
-      transform: none;
-    }
+}
+
+
+/* Rotating  180deg to 360deg*/
+@keyframes rotate {
+  50% {
+    transform: rotate(180deg);
+    background-color: #d1d1d1;
+      box-shadow: none;
+
   }
-  
-  @keyframes fadeBg {
-    from {
-      opacity: 0
-    }
-  
-    to {
-      opacity: 0.3;
-    }
+
+  100% {
+    transform: rotate(360deg);
+    background-color: #080809;
   }
-  
-  @keyframes fade {
-    from {
-      opacity: 0
-    }
-  
-    to {
-      opacity: 1;
-    }
+}
+
+
+/* Rotating up */
+@keyframes rotate-up {
+  from {
+    opacity: 0;
+    transform: rotate(-180deg);
   }
-  
-  /* Change color */
-  @keyframes changeColor {
-    from {
-      background-color: #555;
-    }
-  
-    to {
-      background-color: #080809;
-    }
+
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
   }
-  
-  /* Rotate */
-  @keyframes rotate {
-    50% {
-      transform: rotate(180deg);
-      background-color: #d1d1d1;
-  
-    }
-  
-    100% {
-      transform: rotate(360deg);
-      background-color: #080809;
-    }
+}
+
+/* Rotating down */
+@keyframes rotate-down {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
   }
-  
-  /* Pop-up */
-  @keyframes pop-up{
-    0% {
-      transform: translateY(75%);;
-    }
-    100% {
-      transform: translateY(0%);;
-    }
+
+  to {
+    transform: rotate(-180deg);
+    opacity: 0;
   }
+}
+
+/* Rotating non-stop */
+@keyframes rotate-nonstop {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Sliding from the left */
+@keyframes slide-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+/* Sliding from the right */
+@keyframes slide-right {
+  0% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* Words going up anim */
+@keyframes words-up {
+  0% {
+    opacity: 0;
+    top: 80%;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+/* Fading background-color */
+@keyframes fadeBg {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 0.3;
+  }
+}
+
+/* Fading character */
+@keyframes fade {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Change color */
+@keyframes changeColor {
+  from {
+    background-color: #555;
+  }
+
+  to {
+    background-color: #080809;
+  }
+}
+
+
+/* Pop-up */
+@keyframes pop-up {
+  0% {
+    transform: translateY(75%);
+    ;
+  }
+
+  100% {
+    transform: translateY(0%);
+    ;
+  }
+}
+
+/* Floating */
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+
+  65% {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+/* Door closing animation */
+@keyframes door-close {
+  from {
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+  }
+
+  to {
+    transform: none;
+  }
+}
