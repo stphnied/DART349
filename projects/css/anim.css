@@ -153,11 +153,11 @@
 /* Change color */
 @keyframes changeColor {
   from {
-    background-color: #555;
+    background-color: #080809;
   }
 
   to {
-    background-color: #080809;
+    background-color: #555;
   }
 }
 

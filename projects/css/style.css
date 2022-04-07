@@ -41,7 +41,15 @@ section {
   height: 100vh;
 }
 
-h1 {font-size: 5vmax;}
+h1 {
+  font-size: 5vmax;
+  font-family: 'Amatic SC', cursive;
+}
+
+p {
+  font-family: 'Questrial';
+  letter-spacing: 0.05em;
+}
 
 /* ----- HOMEPAGE SECTION ----- */
 .homepage {
@@ -57,9 +65,16 @@ h1 {font-size: 5vmax;}
   flex-direction: row;
 }
 
-hgroup h1 {
+.title h2 {
+  font-family: 'Questrial';
+  letter-spacing: 0.05em;
+  font-weight: normal;
+}
+
+.title h1 {
   color: #fff;
   text-align: center;
+  font-size: 7vmax;
 }
 
 /* Scroll Btn */
@@ -100,7 +115,7 @@ hgroup h1 {
   top: 0;
   height: 100%;
   width: 51%;
-  background: #fff;
+  background: #131335;
 }
 
 .chevron:before {
@@ -118,8 +133,9 @@ hgroup h1 {
   display: block;
   margin-top: 75px;
   margin-left: -30px;
+  font-family: 'Questrial';
   font-size: 12px;
-  color: #fff;
+  color: #fbfef9;
   text-transform: uppercase;
   white-space: nowrap;
   opacity: .25;
@@ -143,7 +159,6 @@ figure img {
   width: 100%;
   bottom: 0;
   opacity: 0;
-  /* filter:sepia(100%) saturate(300%) brightness(30%) hue-rotate(195deg); */
 }
 
 .intro .people.is-visible {
@@ -186,8 +201,9 @@ figure img {
 /* Speech bubble */
 .bubbleTxt {
   position: absolute;
-  left: 35%;
+  left: 40%;
   top: 15%;
+  font-family: 'Questrial';
 }
 
 .bubbleTxt {
@@ -229,8 +245,9 @@ figure img {
 /* Speech bubble */
 .bubbleTxt2 {
   position: absolute;
-  left: 60%;
+  left: 56%;
   top: 10%;
+  font-family: 'Questrial';
 }
 
 
@@ -281,7 +298,7 @@ figure img {
 }
 
 .anxiety h1 {
-  font-size: 3em;
+  /* font-size: 3em; */
   margin-bottom: 0.25em;
 }
 
@@ -317,7 +334,6 @@ figure img {
 
 .anxiety .eyeball {
   opacity: 1;
-  /* animation: pulse 5s 2s linear alternate infinite; */
 }
 
 .anxiety .eyeball:hover {
@@ -344,6 +360,7 @@ figure img {
   z-index: 10;
   opacity: 0;
   font-size: 2em;
+  font-family: 'Amatic SC', cursive;
 }
 
 
@@ -407,7 +424,6 @@ figure img {
 }
 
 .insomnia.is-visible {
-  background-color: blue;
   animation: changeColor 5s linear alternate infinite;
 }
 
@@ -459,6 +475,7 @@ figure img {
 
 .insomnia side p {
   line-height: 1.5em;
+  color: #6d6d6d;
 }
 
 .insomnia hgroup, .insomnia .clock {
@@ -483,8 +500,8 @@ figure img {
   width: 25rem;
   height: 25rem;
   border-radius: 100%;
-  margin: 5em 2em;
-  border: 1em solid white;
+  margin: 3em 2em;
+  border: 1em solid #fbfef9;
   opacity: 0.7;
 }
 
@@ -493,7 +510,7 @@ figure img {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: white;
+  background-color: #fbfef9;
 
   width: 1rem;
   height: 1rem;
@@ -547,6 +564,7 @@ figure img {
 
 .lonely p {
   font-size: 1.5em;
+  color: #6d6d6d;
 }
 
 .lonely figure {
@@ -577,6 +595,7 @@ figure img {
 }
 
 .lonely .door:hover {
+  cursor: pointer;
   transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
 }
 
@@ -584,3 +603,46 @@ figure img {
   margin-left: 2em;
 }
 
+.help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.help.is-visible {
+  animation: fade 3s forwards;
+}
+
+.help h2 {
+  line-height: 1.5em;
+  letter-spacing: 0.075em;
+  font-weight: normal;
+  font-family: 'Questrial';
+}
+
+.help a {
+  position: relative;
+  height: 45px;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+  padding: 1.5em 1.75em;
+  cursor: pointer;
+  border: 1px solid #fbfef9;
+
+  font-weight: 600;
+  font-size: 1.5em;
+  font-family: 'questrial';
+  letter-spacing: 0.05em;
+  opacity: 1;
+  text-decoration: none;
+  color: #6d6d6d;
+  transition: all 0.5s
+}
+
+.help a:hover {
+  background-color: #131335;
+  color: #fbfef9
+}
