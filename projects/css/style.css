@@ -69,6 +69,7 @@ p {
   font-family: 'Questrial';
   letter-spacing: 0.05em;
   font-weight: normal;
+  padding-top: 2em;
 }
 
 .title h1 {
@@ -204,11 +205,9 @@ figure img {
   left: 40%;
   top: 15%;
   font-family: 'Questrial';
-}
 
-.bubbleTxt {
   height: auto;
-  max-width: 200px;
+  max-width: 300px;
   position: relative;
 
   background: #fbfef9;
@@ -242,19 +241,15 @@ figure img {
 
 
 /* Speech bubble */
-/* Speech bubble */
+
 .bubbleTxt2 {
   position: absolute;
-  left: 56%;
-  top: 10%;
+  left: 57%;
+  top: 32%;
   font-family: 'Questrial';
-}
 
-
-.bubbleTxt2 {
   height: auto;
   max-width: 200px;
-  position: relative;
 
   background: #fbfef9;
   color: #080809;
@@ -291,10 +286,6 @@ figure img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.anxiety side {
-  /* padding-left: 2em; */
 }
 
 .anxiety h1 {
@@ -440,7 +431,7 @@ figure img {
 }
 
 .insomnia figure.is-visible {
-  animation: fade 2s forwards ;
+  animation: fade 2s forwards;
 }
 
 .sun {
@@ -478,7 +469,8 @@ figure img {
   color: #6d6d6d;
 }
 
-.insomnia hgroup, .insomnia .clock {
+.insomnia hgroup,
+.insomnia .clock {
   transform: translateX(2000px);
   opacity: 0;
 }
@@ -486,7 +478,7 @@ figure img {
 
 .insomnia hgroup.is-visible {
   opacity: 1;
-  animation: slide-right 2s  forwards;
+  animation: slide-right 2s forwards;
 }
 
 .insomnia .clock.is-visible {
@@ -522,7 +514,8 @@ figure img {
 .insomnia .clock:hover {
   cursor: pointer;
 }
-.insomnia .clock:hover >* {
+
+.insomnia .clock:hover>* {
   animation-play-state: paused;
   /* cursor: pointer; */
 }
@@ -645,4 +638,142 @@ figure img {
 .help a:hover {
   background-color: #131335;
   color: #fbfef9
+}
+
+
+/* Mobile & Tablette*/
+@media (max-width: 768px) {
+
+  /* HOMEPAGE SECTION */
+  .title {
+    flex-direction: column;
+  }
+
+  .title h1 {
+    font-size: 12vmax;
+  }
+
+  .title h2 {
+    font-size: 2.25em;
+    padding-top: 0;
+    align-self: center;
+  }
+
+  /* INTRO SECTION */
+  .intro .portrait {
+    max-width: 200px;
+  }
+
+  .intro .people {
+    width: 1500px;
+  }
+
+  .bubbleTxt {
+    top: 10%;
+    left: 20%;
+  }
+
+  .bubbleTxt2 {
+    left: 40%;
+  }
+
+  /* ANXIETY SECTION */
+  .anxiety {
+    flex-direction: column;
+    /* justify-content: center; */
+  }
+
+  .anxiety side {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .anxiety h1 {
+    font-size: 5em;
+  }
+
+  .anxiety p {
+    font-size: 1.25 em;
+  }
+
+  .anxiety figure {
+    width: 90vw;
+  }
+
+  /* OVERTHINKING SECTION */
+  .overthinking .walk {
+    width: 40vw;
+    left: 30%;
+  }
+
+  .path-left {
+    height: 300px;
+    width: 6000px;
+  }
+
+  .overthinking container p {
+    font-size: 5em;
+  }
+
+  .insomnia side {
+    transform: translateY(5%);
+  }
+
+  .insomnia h1 {
+    font-size: 3.5em;
+  }
+
+  .insomnia p {
+    font-size: 1em;
+  }
+
+  .insomnia figure {
+    top: 70%;
+    width: 50vw ;
+  }
+
+  .insomnia .clock {
+    width: 20rem;
+    height: 20rem;
+    margin: 1em 0em;
+
+  }
+
+  /* Lonely SECTION */
+  .lonely {
+    flex-direction: column;
+  }
+
+  .lonely figure {
+    width: 50vw;
+  }
+
+  .lonely .door {
+    width: 50vw;
+  }
+
+  .lonely side {
+    margin-top: 5em;
+    text-align: center;
+  }
+
+  .lonely h1 {
+    font-size: 4em;
+  }
+  .lonely p {
+    font-size: 1.25em;
+  }
+
+  .help h2 {
+    font-size: 1.5em;
+  }
+  .help h1 {
+    font-size: 4.25em;
+    margin: 0.25em 0;
+  }
+
+  .help a {
+    margin-top: 2em;
+  }
 }
