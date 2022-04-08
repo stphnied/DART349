@@ -65,6 +65,10 @@ p {
   flex-direction: row;
 }
 
+.title.is-visible {
+  animation: fade 3s linear;
+}
+
 .title h2 {
   font-family: 'Questrial';
   letter-spacing: 0.05em;
