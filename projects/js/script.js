@@ -43,7 +43,6 @@ function isElementInViewport(el) {
 }
 
 
-// TESTING ---
 createWords();
 blinkEye();
 setInterval(createWords, 5000)

@@ -104,7 +104,7 @@ nav ul li a {
 }
 
 .home-container .item:hover,
-.ex-wrap .ex-item:hover {
+.ex-wrap .ex-item:hover, .projects-wrap .ex-item:hover {
     background-color: #f88dad;
     color: #191923;
     cursor: pointer;
@@ -175,7 +175,7 @@ figure img {
 */
 
 .ex-container {
-    width: 50vw;
+    width: 60vw;
     height: 50vh;
     margin: 0 auto;
 }
@@ -196,6 +196,11 @@ figure img {
     width: 200px;
     height: 200px;
 }
+
+small {
+    font-size: 0.5em;
+}
+
 
 /* Projects */
 .projects-wrap {
@@ -306,11 +311,16 @@ footer {
         margin-bottom: 1.5em;
     }
 
+    small {
+        font-size: 1em;
+    }
+
 
     footer {
+        position: fixed;
         padding: 1.75em;
         font-size: 1em;
-        bottom: -20px;
+        bottom: 0;
     }
 }
 
